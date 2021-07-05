@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "com.unity.barracuda": "2.1.0-preview",
+    "com.unity.ugui": "1.0.0"
+  }
+}
