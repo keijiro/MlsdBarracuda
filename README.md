@@ -1,6 +1,8 @@
 MlsdBarracuda
 =============
 
+![screenshot](https://user-images.githubusercontent.com/343936/124577416-33265200-de88-11eb-9cc4-652e4324abef.png)
+
 **MlsdBarracuda** is a Unity sample project that runs the line segment
 detection model ([M-LSD]) on the [Barracuda] neural network inference engine.
 
