@@ -17,7 +17,7 @@ Shader "Hidden/MLSD/Visualizer"
 
     float4 Fragment(float4 position : SV_Position) : SV_Target
     {
-        return 1;
+        return float4(0.5, 0.8, 1, 1);
     }
 
     ENDCG
