@@ -25,7 +25,7 @@ public sealed class Visualizer : MonoBehaviour
         Destroy(_material);
     }
 
-    void Update()
+    void LateUpdate()
     {
         _detector.ProcessImage(_webcam.Texture, _threshold);
 
