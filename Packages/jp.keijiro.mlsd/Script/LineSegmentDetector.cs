@@ -20,8 +20,8 @@ public sealed class LineSegmentDetector : System.IDisposable
     public void Dispose()
       => DeallocateObjects();
 
-    public void ProcessImage(Texture sourceTexture)
-      => RunModel(sourceTexture, 0.1f);
+    public void ProcessImage(Texture sourceTexture, float threshold = 0.1f)
+      => RunModel(sourceTexture, threshold);
 
     #endregion
 

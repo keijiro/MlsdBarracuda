@@ -233,7 +233,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1543015218}
-  - component: {fileID: 1543015217}
+  - component: {fileID: 1543015220}
+  - component: {fileID: 1543015219}
   m_Layer: 0
   m_Name: Test
   m_TagString: Untagged
@@ -241,21 +242,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1543015217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1543015216}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96620433ee11745ec9a49076d34af59e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _resources: {fileID: 11400000, guid: 18fb6774826d2490dabf226f2f5b0c67, type: 2}
-  _image: {fileID: 2800000, guid: 06b5449a91a4a42c5a60052d824aa52c, type: 3}
-  _shader: {fileID: 4800000, guid: 16e8c329498ab4b0d9cbec2f0d3dfcf7, type: 3}
 --- !u!4 &1543015218
 Transform:
   m_ObjectHideFlags: 0
@@ -271,6 +257,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1543015219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543015216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c9508a6dc92247c09743b5eb7415d94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _webcam: {fileID: 1543015220}
+  _resources: {fileID: 11400000, guid: 18fb6774826d2490dabf226f2f5b0c67, type: 2}
+  _threshold: 0.1
+  _previewUI: {fileID: 1925997662}
+  _shader: {fileID: 4800000, guid: 16e8c329498ab4b0d9cbec2f0d3dfcf7, type: 3}
+--- !u!114 &1543015220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543015216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 846479b390b1a4c7d9d9013740f42960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _deviceName: 
+  _resolution: {x: 1920, y: 1080}
+  _frameRate: 30
+  _dummyImage: {fileID: 2800000, guid: 44f910517e98646659de541165e2611f, type: 3}
 --- !u!1 &1607758709
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,7 +378,7 @@ GameObject:
   - component: {fileID: 1925997662}
   - component: {fileID: 1925997661}
   m_Layer: 5
-  m_Name: RawImage
+  m_Name: Preview
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -419,7 +438,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 06b5449a91a4a42c5a60052d824aa52c, type: 3}
+  m_Texture: {fileID: 0}
   m_UVRect:
     serializedVersion: 2
     x: 0
