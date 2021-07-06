@@ -1,7 +1,7 @@
 {
   "author": "Keijiro Takahashi",
   "dependencies": { "com.unity.barracuda": "2.1.0-preview" },
-  "description": "Light-weight and Real-time Line Segment Detection runtime for for Unity Barracuda",
+  "description": "Light-weight and Real-time Line Segment Detection runtime for Unity Barracuda.",
   "displayName": "M-LSD (Line Segment Detector)",
   "keywords": [ "unity" ],
   "license": "Apache-2.0",
@@ -9,5 +9,5 @@
   "repository": "github:keijiro/MlsdBarracuda",
   "unity": "2020.3",
   "unityRelease": "0f1",
-  "version": "0.0.1"
+  "version": "1.0.0"
 }
