@@ -7,6 +7,7 @@ public sealed class Visualizer : MonoBehaviour
     [SerializeField] WebcamInput _webcam = null;
     [SerializeField] ResourceSet _resources = null;
     [SerializeField, Range(0.001f, 1)] float _threshold = 0.1f;
+    [SerializeField] Color _lineColor = Color.white;
     [SerializeField] UI.RawImage _previewUI = null;
     [SerializeField] Shader _shader = null;
 
@@ -29,6 +30,7 @@ public sealed class Visualizer : MonoBehaviour
     {
         _detector.ProcessImage(_webcam.Texture, _threshold);
 
+        _material.SetColor("_LineColor", _lineColor);
         _material.SetTexture("_LineData", _detector.BakedTexture);
 
         Graphics.DrawProcedural

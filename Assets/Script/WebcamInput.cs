@@ -5,7 +5,8 @@ public sealed class WebcamInput : MonoBehaviour
     #region Editable attributes
 
     [SerializeField] string _deviceName = "";
-    [SerializeField] Vector2Int _resolution = new Vector2Int(1920, 1080);
+    [SerializeField] Vector2Int _captureSize = new Vector2Int(1920, 1080);
+    [SerializeField] Vector2Int _cropSize = new Vector2Int(1080, 1080);
     [SerializeField] int _frameRate = 30;
     [SerializeField] Texture2D _dummyImage = null;
 
@@ -31,8 +32,8 @@ public sealed class WebcamInput : MonoBehaviour
     {
         if (_dummyImage != null) return;
         _webcam = new WebCamTexture
-          (_deviceName, _resolution.x, _resolution.y, _frameRate);
-        _buffer = new RenderTexture(_resolution.x, _resolution.y, 0);
+          (_deviceName, _captureSize.x, _captureSize.y, _frameRate);
+        _buffer = new RenderTexture(_cropSize.x, _cropSize.y, 0);
         _webcam.Play();
     }
 
@@ -48,7 +49,7 @@ public sealed class WebcamInput : MonoBehaviour
         if (!_webcam.didUpdateThisFrame) return;
 
         var aspect1 = (float)_webcam.width / _webcam.height;
-        var aspect2 = (float)_resolution.x / _resolution.y;
+        var aspect2 = (float)_cropSize.x / _cropSize.y;
         var gap = aspect2 / aspect1;
 
         var vflip = _webcam.videoVerticallyMirrored;

@@ -4,6 +4,7 @@ Shader "Hidden/MLSD/Visualizer"
 
     #include "UnityCG.cginc"
 
+    float4 _LineColor;
     Texture2D<float4> _LineData;
 
     void Vertex(uint vid : SV_VertexID, uint iid : SV_InstanceID,
@@ -17,7 +18,7 @@ Shader "Hidden/MLSD/Visualizer"
 
     float4 Fragment(float4 position : SV_Position) : SV_Target
     {
-        return float4(0.5, 0.8, 1, 1);
+        return _LineColor;
     }
 
     ENDCG

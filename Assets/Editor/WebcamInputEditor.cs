@@ -7,14 +7,16 @@ sealed class WebcamInputEditor : Editor
     static readonly GUIContent SelectLabel = new GUIContent("Select");
 
     SerializedProperty _deviceName;
-    SerializedProperty _resolution;
+    SerializedProperty _captureSize;
+    SerializedProperty _cropSize;
     SerializedProperty _frameRate;
     SerializedProperty _dummyImage;
 
     void OnEnable()
     {
         _deviceName = serializedObject.FindProperty("_deviceName");
-        _resolution = serializedObject.FindProperty("_resolution");
+        _captureSize = serializedObject.FindProperty("_captureSize");
+        _cropSize = serializedObject.FindProperty("_cropSize");
         _frameRate  = serializedObject.FindProperty("_frameRate");
         _dummyImage = serializedObject.FindProperty("_dummyImage");
     }
@@ -48,7 +50,8 @@ sealed class WebcamInputEditor : Editor
 
         EditorGUILayout.EndHorizontal();
 
-        EditorGUILayout.PropertyField(_resolution);
+        EditorGUILayout.PropertyField(_captureSize);
+        EditorGUILayout.PropertyField(_cropSize);
         EditorGUILayout.PropertyField(_frameRate);
         EditorGUILayout.PropertyField(_dummyImage);
 

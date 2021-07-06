@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311915, g: 0.3807396, b: 0.35872662, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -272,6 +272,7 @@ MonoBehaviour:
   _webcam: {fileID: 1543015220}
   _resources: {fileID: 11400000, guid: 18fb6774826d2490dabf226f2f5b0c67, type: 2}
   _threshold: 0.1
+  _lineColor: {r: 0.35917303, g: 1, b: 0.12893075, a: 1}
   _previewUI: {fileID: 1925997662}
   _shader: {fileID: 4800000, guid: 16e8c329498ab4b0d9cbec2f0d3dfcf7, type: 3}
 --- !u!114 &1543015220
@@ -287,7 +288,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _deviceName: 
-  _resolution: {x: 1080, y: 1080}
+  _captureSize: {x: 1920, y: 1080}
+  _cropSize: {x: 1080, y: 1080}
   _frameRate: 30
   _dummyImage: {fileID: 2800000, guid: 44f910517e98646659de541165e2611f, type: 3}
 --- !u!1 &1607758709
