@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 106ff520262374f1690bf910b69a88bb, type: 3}
-  m_Name: MLSD
+  m_Name: MLSD 320x320 Tiny
   m_EditorClassIdentifier: 
   model: {fileID: 5022602860645237092, guid: 8610d8978f9de47809cdfb9c1f37e756, type: 3}
   preprocess: {fileID: 7200000, guid: f7c93e560d83e4b008a3b0ec0b4824ec, type: 3}

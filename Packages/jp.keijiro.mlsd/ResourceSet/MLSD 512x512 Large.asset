@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 106ff520262374f1690bf910b69a88bb, type: 3}
+  m_Name: MLSD 512x512 Large
+  m_EditorClassIdentifier: 
+  model: {fileID: 5022602860645237092, guid: 982298a33b4684e2fb242713eee29613, type: 3}
+  preprocess: {fileID: 7200000, guid: f7c93e560d83e4b008a3b0ec0b4824ec, type: 3}
+  postprocess: {fileID: 7200000, guid: ad2179c85c9d345c48581f2b822e6a74, type: 3}
