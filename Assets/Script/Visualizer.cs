@@ -1,10 +1,11 @@
 using UnityEngine;
 using UI = UnityEngine.UI;
+using Klak.TestTools;
 using Mlsd;
 
 public sealed class Visualizer : MonoBehaviour
 {
-    [SerializeField] WebcamInput _webcam = null;
+    [SerializeField] ImageSource _source = null;
     [SerializeField] ResourceSet _resources = null;
     [SerializeField, Range(0.001f, 1)] float _threshold = 0.1f;
     [SerializeField] Color _lineColor = Color.white;
@@ -28,7 +29,7 @@ public sealed class Visualizer : MonoBehaviour
 
     void LateUpdate()
     {
-        _detector.ProcessImage(_webcam.Texture, _threshold);
+        _detector.ProcessImage(_source.Texture, _threshold);
 
         _material.SetColor("_LineColor", _lineColor);
         _material.SetTexture("_LineData", _detector.BakedTexture);
@@ -37,6 +38,6 @@ public sealed class Visualizer : MonoBehaviour
           (_material, new Bounds(Vector3.zero, Vector3.one * 1000),
            MeshTopology.Lines, 2, LineSegmentDetector.MaxDetection);
 
-        _previewUI.texture = _webcam.Texture;
+        _previewUI.texture = _source.Texture;
     }
 }
