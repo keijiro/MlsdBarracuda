@@ -24,3 +24,10 @@ Barracuda-compatible form using [this Colab notebook].
 [PINTO0309]: https://github.com/PINTO0309/PINTO_model_zoo
 [this Colab notebook]: 
   https://colab.research.google.com/drive/1MBUcs4On26MCF_saKcqR00yz_FFzGGno?usp=sharing
+
+Related Projects
+----------------
+
+- [MlsdVfx] - An experimental project using M-LSD for visual effects.
+
+[MlsdVfx]: https://github.com/keijiro/MlsdVfx
